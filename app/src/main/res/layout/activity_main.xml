@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/imageHolder"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ff4d03">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_baseline_how_to_reg_24" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/CircleImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/imageHolder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-60dp"
+        android:src="@drawable/janet"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/relEmma"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/imageHolder">
+
+        <TextView
+            android:id="@+id/emma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp"
+            android:text="Emma Buffet"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="55dp"
+            android:layout_toRightOf="@id/emma"
+            android:background="@drawable/roundedtxt"
+            android:backgroundTint="@color/orange"
+            android:gravity="center"
+            android:text=" ⭐ 16"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emma"
+            android:layout_centerHorizontal="true"
+            android:text="ID:12345678"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/foll"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/relEmma"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/sixty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="60"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Following"
+                android:textSize="10dp"
+                android:layout_below="@id/sixty"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/forty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="40"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Fans"
+                android:textSize="10dp"
+                android:layout_below="@id/forty"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/fifty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Following"
+                android:textSize="10dp"
+                android:layout_below="@id/fifty"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/live"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/foll"-->
+<!--        >-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/liveImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_live" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/liveImg"-->
+<!--            android:text="My Live Stream"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </RelativeLayout>-->
+<!--    -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/foll"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/recycler_list"
+        android:id="@+id/recycler_view"
+        />
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/messages"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/live">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/messageImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_baseline_email_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/messageImg"-->
+<!--            android:text="Messages"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:src="@drawable/ic_baseline_circle_24" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/topGifters"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/messages">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/giftImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_baseline_people_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/giftImg"-->
+<!--            android:text="Top Gifters"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:background="@drawable/roundedtxt"-->
+<!--            android:backgroundTint="@color/orange"-->
+<!--            android:gravity="center"-->
+<!--            android:text="New"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="10sp" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/wallet"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/topGifters">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/walletImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_baseline_account_balance_wallet_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/walletImg"-->
+<!--            android:text="My Wallet"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:text="😶 58"-->
+<!--            android:textSize="12dp" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/subscription"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/wallet">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/subscriptionImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_rss" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/subscriptionImg"-->
+<!--            android:text="My Subscriptions"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/friends"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/subscription">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/friendsImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_baseline_manage_accounts_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/friendsImg"-->
+<!--            android:text="Find Friends"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:src="@drawable/ic_baseline_circle_24" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/redeem"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/friends">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/redeemImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_baseline_view_agenda_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/redeemImg"-->
+<!--            android:text="Redeem Cash $"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:text="💎 5000=$50"-->
+<!--            android:textSize="12dp" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/setting"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/redeem">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/settingImg"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:src="@drawable/ic_baseline_settings_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_toRightOf="@id/settingImg"-->
+<!--            android:text="Settings"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </RelativeLayout>-->
+
+</RelativeLayout>
